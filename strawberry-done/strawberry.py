@@ -1,6 +1,6 @@
 
 strawberry_file = "strawberry.txt"
-strawberry_shorts = "strawberry-short.txt"
+strawberry_shorts = "strawberry-done-short.txt"
 
 from pprint import pprint
 
