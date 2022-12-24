@@ -2,14 +2,13 @@
 strawberry_file = "strawberry.txt"
 strawberry_shorts = "strawberry-done-short.txt"
 
-from pprint import pprint
 
 def read_file(filename):
     try:
         with open(filename) as my_file:
             my_file = my_file.read()
             my_file = my_file.upper()
-            my_file = my_file.replace(",","")
+            my_file = my_file.replace(",", "")
             my_file = my_file.replace("...", "")
             my_file = my_file.split("\n")
             return my_file
@@ -33,10 +32,12 @@ def finding_the_words(filename):
                         word_.append(f"'{words[i]}', '{words[i + 1]}', '{words[i + 2]}'")
     return word_
 
+
 def main():
     the_list = finding_the_words(strawberry_file)
     for element in the_list:
         print(f"({element})")
+
 
 if __name__ == '__main__':
     main()
