@@ -1,5 +1,6 @@
 FILENAME = "diabetes.csv"
 
+
 def readfile(filename):
     try:
         with open(filename) as my_file:
@@ -66,13 +67,12 @@ def average_values_of_diabets(file):
         x = int(x)
         age_counter = age_counter + x
 
-    return pregnancies_counter/len(file), glucose_counter/len(file), blood_pressure_counter/len(file),\
-        skin_thickness_counter/len(file), insulin_counter/len(file), bmi_counter/len(file), \
-        diabetes_pedigree_function_counter/len(file), age_counter/len(file), outcome_counter/len(file)
+    return pregnancies_counter / len(file), glucose_counter / len(file), blood_pressure_counter / len(file), \
+           skin_thickness_counter / len(file), insulin_counter / len(file), bmi_counter / len(file), \
+           diabetes_pedigree_function_counter / len(file), age_counter / len(file), outcome_counter / len(file)
 
 
 def predict_diabets(file):
-
     pregnancies = (input("Enter your Number of pregnancies level: "))
     glucose = (input("Enter your Glucose level in blood level: "))
     blood_pressure = (input("Enter your Blood pressure level: "))
@@ -99,7 +99,7 @@ def predict_diabets(file):
                                           f"{teshis}")
     else:
         print("\nWe don't have any information that you entered\n"
-            "Please be sure the correct answers that you entered\n")
+              "Please be sure the correct answers that you entered\n")
 
 
 def main():
