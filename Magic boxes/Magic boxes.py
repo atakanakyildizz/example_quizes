@@ -2,6 +2,7 @@ ACTIONS = "actions.txt"
 CARLFAIL = "actions-fail_carl.txt"
 BOBFAIL = "actions-fail_bob.txt"
 
+
 def read_file(filename):
     try:
         with open(filename) as my_file:
@@ -28,11 +29,11 @@ def Alice_box(name):
         print(f"There is a error {counter}")
     print(alice_box)
 
+
 def main():
     Alice_box(BOBFAIL)
     Alice_box(CARLFAIL)
     Alice_box(ACTIONS)
-
 
 
 if __name__ == '__main__':
