@@ -1,7 +1,6 @@
 FILENAME = "characters.txt"
 FILENAME2 = "question1.txt"
-from pprint import pprint
-
+FILENAME3 = "question2.txt"
 
 
 def read_file(filename):
@@ -17,7 +16,7 @@ def read_file(filename):
         print(f"Whops we have a problem \n{error}")
 
 
-def main():
+def function(FILENAME, FILENAME2):
     characters = read_file(FILENAME)
     quest1 = read_file(FILENAME2)
 
@@ -34,15 +33,28 @@ def main():
                 result.append(elements[1])
             a = a + 1
 
-
     characters = characters[1:]
     for lines in characters:
         lines = lines.split(";")
+        counter = []
         for i in index:
             for things in result:
                 if things.replace(" ", "") == lines[i].replace(" ", ""):
-                    print(lines)
-    
+                    counter.append(things)
+                if len(counter) == len(result):
+                    return lines
+
+
+def main():
+    characters = read_file(FILENAME)
+    characters = characters[0].split(";")
+    print("                ", characters)
+
+    first_question = function(FILENAME, FILENAME2)
+    print("First question: ", first_question)
+    second_question = function(FILENAME, FILENAME3)
+    print("Second question: ", second_question)
+
 
 if __name__ == '__main__':
     main()
